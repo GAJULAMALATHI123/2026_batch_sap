@@ -1,0 +1,22 @@
+
+# http://localhost:4004/odata/v4/catalog/AddressSrv
+POST http://localhost:4004/odata/v4/catalog/CreateEmployee
+Content-Type: application/json
+
+{
+    "Currency_code":"USD",
+                    "ID":"2a5776ec-e711-4c11-a92a-2da5b46c40a23",
+                    "accountNumber":null,
+                    "bankId":null,
+                    "bankName":null,
+                    "email":null,
+                    "gender":"M",
+                    "language":"E",
+                    "loginName":"Raman",
+                    "nameFirst":"Rama",
+                   "nameInitials":null,
+                    "nameLast":"Murthy",
+                    "nameMiddle":null,
+                    "phoneNumber":"+917655433789",
+                    "salaryAmount":"45000"
+}

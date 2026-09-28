@@ -1,0 +1,66 @@
+# POST http://localhost:4004/odata/v4/catalog/CreateMCT_ControllingArea
+# Content-Type: application/json
+
+# {
+#      "ID": 1,
+#    "Name": "SAP SE",
+#      "Manager": 4000000009
+# }
+# ###
+# POST  http://localhost:4004/odata/v4/catalog/updateMCT_ControllingArea
+# Content-Type: application/json 
+
+# {
+#     "ID": 2,
+#    "Name": "SAe SE",
+#      "Manager": 4000000005
+# }
+
+# ###
+# POST http://localhost:4004/odata/v4/catalog/deleteMCT_ControllingArea
+# Content-Type: application/json
+
+# {
+#     "ID":1
+# }
+
+http://localhost:4004/odata/v4/catalog/Prodsrc
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc/$count
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc?$top=10
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc?$top=10&$skip=10
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc?$filter=category eq 'Notebooks'&Dim_unit eq 'CM'
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc?$select=Product_id,Description,category,Price
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc?$orderby=Product_id desc
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc('74867AD200E41EDBA5D8B06B26F8C052')/Product_id
+###
+http://localhost:4004/odata/v4/catalog/Prodsrc('74867AD200E41EDBA5D8B06B26F8C052')/Product_id/$value
+###
+http://localhost:4004/odata/v4/catalog/PurchaseOdersrv?$expand=Items
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Categories?$select=CategoryName,Description
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$select=ContactName,CustomerID,CompanyName&$filter=City eq 'London'
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers?$filter=Fax ne null
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Orders?$select=CustomerID&$filter=RequiredDate ge 1997-01-01T00:00:00Z&RequiredDate le 1998-01-01T00:00:00Z&Freight lt 100
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Products/$count?$filter=Discontinued eq false
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Categories?$select=CategoryName,Description&$filter=startswith(CategoryName,'Co')
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers?$select=CompanyName,City,Country,PostalCode&$filter=contains(Address,'rue')&$orderby=CompanyName
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Order_Details?$apply=groupby((ProductID),aggregate(Quantity with sum as TotalQuantityOrdered))
+###6
+https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers?$select=CompanyName,ContactName,ContactTitle,Region&$filter=Region ne null
+###7
+https://services.odata.org/V4/Northwind/Northwind.svc/Products_by_Categories?$select=ProductName&$filter=CategoryName eq 'Condiments'
+###
